@@ -1,4 +1,4 @@
-# README #
+# LEEME #
 
 Esto no se lo lee nadie pero aún así lo pongo
 
@@ -6,9 +6,21 @@ Esto no se lo lee nadie pero aún así lo pongo
 
 * Prueba de proyecto en Netbeans, con un gitignore correcto
 
-### How do I get set up? ###
-Para que funcione correctamente, hay que hacer un clone del proyecto, en la carpeta htdocs, llamando al proyecto "AlmacenNetBeans"
+### Como hago que funcione? ###
 
-Dentro hay un script para generar la base de datos
+Para que funcione correctamente:
+
+1º hay que hacer un clone del proyecto, 
+en la carpeta htdocs, llamando al proyecto "AlmacenNetBeans"
+Esa carpeta no debe existir cuando clonas, la crea git al clonar
+
+2º Abres el proyecto desde NetBeans, y lo ejecutas. 
+
+3º NO MODIFIQUES NINGUN ARCHIVO DEL PROYECTO, ÚNICAMENTE PUEDES AÑADIR TUS ARCHIVOS
+
+IMPORTANTE: si por error has modificado algo del proyecto, ignora los cambios de esos archivos
+en SourceTree (opcion unstage)
+
+
 
 
