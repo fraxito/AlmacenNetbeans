@@ -1,5 +1,2 @@
 ## GitIgnore para NetBeans
-nbproject/
 nbproject/private/
-nbactions.xml
-nb-configuration.xml
