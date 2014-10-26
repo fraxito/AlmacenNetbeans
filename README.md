@@ -21,6 +21,7 @@ Esa carpeta no debe existir cuando clonas, la crea git al clonar
 IMPORTANTE: si por error has modificado algo del proyecto que no te correspondía, ignora los cambios de esos archivos
 en SourceTree (opcion unstage) o en el propio GIT de NetBeans
 
+4º No le des de comer después de las 12:00!
 
 
 
