@@ -1,17 +1,15 @@
 <?php 
-function chequeaFichero ($nombre_fichero){
+function muestraColor ($nombre_fichero){
     if (file_exists($nombre_fichero)) {
         echo '<div class = "caja cajaVerde">'.$nombre_fichero.'</div>';
     } else {
         echo '<div class = "caja cajaRoja">'.$nombre_fichero.'</div>';
     }
 }
-function chequea ($nombre_fichero){
-    $existe = false;
+function muestraPagina ($nombre_fichero){
     if (file_exists($nombre_fichero)) {
-        $existe = true;
+         require $nombre_fichero; 
     } 
-    return $existe;
 }
 ?>    
 <!DOCTYPE html>
@@ -23,19 +21,11 @@ function chequea ($nombre_fichero){
         <title>PRUEBA ALMACÉN GIT</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-        <style>
-        .caja {
-            width:164px;
-            height:24px;
-            text-align: center;
-        }
-        .cajaRoja{background-color: #f00;}
-        .cajaVerde{background-color: #0f0;}    
-        </style>
+        <link href="css/estilo.css" rel="stylesheet">
+        
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/bootstrap3.min.js"></script>
-
-        
+     
     </head>
     <body>
         <br>
@@ -53,21 +43,18 @@ function chequea ($nombre_fichero){
         
         for ($i=1; $i<6; $i++){
             echo '<div class="container" id="GRUPO'.$i.'">
-
                      <div class="row">
                              <div class="col-xs-2" >
                                  ';
                                 for ($j=0; $j<5; $j++){
-                                     chequeaFichero('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
+                                     muestraColor('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
                                      echo '<br>';
                                 }
                         echo '</div>
                              <div class="col-xs-10">
                                 ';
                                 for ($j=0; $j<5; $j++){
-                                     if (chequea('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php')){
-                                         require 'GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php';   
-                                     }
+                                     muestraPagina('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
                                      echo '<hr><br>';
                                 }
                         echo '</div>
@@ -75,7 +62,7 @@ function chequea ($nombre_fichero){
                   </div>
                   <hr>
                 ';
-        } //del for
+        } //del for $i
         ?>
     </body>
 </html>

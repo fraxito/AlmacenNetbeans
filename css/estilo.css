@@ -1,0 +1,10 @@
+
+.caja {
+    width:164px;
+    height:24px;
+    text-align: center;
+}
+.cajaRoja{background-color: #f00;}
+.cajaVerde{background-color: #0f0;}    
+
+
