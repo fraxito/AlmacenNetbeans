@@ -49,7 +49,7 @@ function muestraPagina ($nombre_fichero){
     </head>
     <body class="metro">
 <!--   aqui os dejo un ejemplo de lo que se puede hacer con http://metroui.org.ua/
-        hay más ejemplos en http://metroui.org.ua/examples.html-->
+        hay más ejemplos en http://metroui.org.ua/examples.html -->
         
 <!--        <br> 
          <div class="row">
