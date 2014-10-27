@@ -21,15 +21,50 @@ function muestraPagina ($nombre_fichero){
         <title>PRUEBA ALMACÉN GIT</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="css/metro-bootstrap.min.css" rel="stylesheet">
+        <link href="css/iconFont.min.css" rel="stylesheet">
         <link href="css/estilo.css" rel="stylesheet">
         
         <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.widget.min.js"></script>
         <script src="js/bootstrap3.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/metro.min.js"></script>
      
     </head>
-    <body>
+    <body class="metro">
+<!--        aqui os dejo un ejemplo de lo que se puede hacer con http://metroui.org.ua/
+        hay más ejemplos en http://metroui.org.ua/examples.html-->
+        
+        <br> 
+         <div class="row">
+            <div class="col-xs-12" >
+                <div class="tile bg-darkPink">
+                        <div class="tile-content icon">
+                            <i class="icon-cart-2"></i>
+                        </div>
+                        <div class="tile-status">
+                            <span class="name">Store</span>
+                        </div>
+                </div>
+                <div class="tile half bg-red">
+                        <div class="tile-content icon">
+                            <i class="icon-rocket"></i>
+                        </div>
+                </div>
+                <div class="tile double">
+                <div class="tile-content image-set">
+                    <img src="imagenes/1.jpg">
+                    <img src="imagenes/2.jpg">
+                    <img src="imagenes/3.jpg">
+                    <img src="imagenes/4.jpg">
+                    <img src="imagenes/5.jpg">
+                </div>
+            </div>
+            </div>
+        </div>
         <br>
-        <?php 
+        <?php      
         $grupos = array(
                     array(24,13,15,4,9),
                     array(5,1,3,7,10),
@@ -45,7 +80,7 @@ function muestraPagina ($nombre_fichero){
             echo '<div class="container" id="GRUPO'.$i.'">
                      <div class="row">
                              <div class="col-xs-2" >
-                                 ';
+                                ';
                                 for ($j=0; $j<5; $j++){
                                      muestraColor('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
                                      echo '<br>';
