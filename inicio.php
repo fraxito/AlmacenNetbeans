@@ -93,24 +93,18 @@ function muestraPagina ($nombre_fichero){
                                'P5155','P5010','R0481','S2612','S8418');
         
         for ($i=1; $i<6; $i++){
-            echo '<div class="container" id="GRUPO'.$i.'">
-                     <div class="row">
-                             <div class="col-xs-2" >
-                                ';
+            echo '<div class="container" id="GRUPO'.$i.'">';
                                 for ($j=0; $j<5; $j++){
-                                     muestraColor('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
-                                     echo '<br>';
-                                }
-                        echo '</div>
-                             <div class="col-xs-10">
-                                ';
-                                for ($j=0; $j<5; $j++){
+                                echo '<div class="row">
+                                        <div class="col-xs-2" >';
+                                            muestraColor('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
+                                    echo '</div><div class="col-xs-10">';
                                      muestraPagina('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
-                                     echo '<hr><br>';
+                                     echo '</div> </div>';
                                 }
-                        echo '</div>
-                     </div>      
-                  </div>
+
+                          
+                 echo ' </div>
                   <hr>
                 ';
         } //del for $i
