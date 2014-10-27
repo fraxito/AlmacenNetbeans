@@ -1,23 +1,3 @@
-<html>
-     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="../css/metro-bootstrap.min.css" rel="stylesheet">
-        <link href="../css/iconFont.min.css" rel="stylesheet">
-        
-        <script src="../js/jquery-1.11.1.min.js"></script>
-        <script src="../js/jquery.widget.min.js"></script>
-        <script src="../js/bootstrap3.min.js"></script>
-        <script src="../js/jquery.mousewheel.js"></script>
-        <script src="../js/metro.min.js"></script>
-     
-    </head>
-    <body class = "metro">
-
-
 
         <br>
 <div class="row">
@@ -43,5 +23,3 @@
             </div>
             </div>
         </div>
-        </body>
-</html>
