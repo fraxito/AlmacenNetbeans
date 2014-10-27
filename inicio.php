@@ -1,17 +1,31 @@
 <?php 
-function chequeaFichero ($nombre_fichero){
+function muestraColor ($nombre_fichero){
     if (file_exists($nombre_fichero)) {
-        echo '<div class = "caja cajaVerde">'.$nombre_fichero.'</div>';
+        echo '
+            <div class="tile bg-green">
+                <div class="tile-content icon">
+                    <i class="icon-thumbs-up"></i>
+                </div>
+                <div class="tile-status">
+                    <span class="name">'.$nombre_fichero.'</span>
+                </div>
+            </div>';
     } else {
-        echo '<div class = "caja cajaRoja">'.$nombre_fichero.'</div>';
+        echo '
+            <div class="tile bg-red">
+                <div class="tile-content icon">
+                    <i class="icon-thumbs-down"></i>
+                </div>
+                <div class="tile-status">
+                    <span class="name">'.$nombre_fichero.'</span>
+                </div>
+            </div>';
     }
 }
-function chequea ($nombre_fichero){
-    $existe = false;
+function muestraPagina ($nombre_fichero){
     if (file_exists($nombre_fichero)) {
-        $existe = true;
+         require $nombre_fichero; 
     } 
-    return $existe;
 }
 ?>    
 <!DOCTYPE html>
@@ -23,23 +37,50 @@ function chequea ($nombre_fichero){
         <title>PRUEBA ALMACÉN GIT</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-        <style>
-        .caja {
-            width:164px;
-            height:24px;
-            text-align: center;
-        }
-        .cajaRoja{background-color: #f00;}
-        .cajaVerde{background-color: #0f0;}    
-        </style>
-        <script src="js/jquery-1.11.1.min.js"></script>
-        <script src="js/bootstrap3.min.js"></script>
-
+        <link href="css/metro-bootstrap.min.css" rel="stylesheet">
+        <link href="css/iconFont.min.css" rel="stylesheet">
         
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery.widget.min.js"></script>
+        <script src="js/bootstrap3.min.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/metro.min.js"></script>
+     
     </head>
-    <body>
-        <br>
-        <?php 
+    <body class="metro">
+<!--   aqui os dejo un ejemplo de lo que se puede hacer con http://metroui.org.ua/
+        hay más ejemplos en http://metroui.org.ua/examples.html-->
+        
+<!--        <br> 
+         <div class="row">
+            <div class="col-xs-12" >
+                <div class="tile bg-darkPink">
+                        <div class="tile-content icon">
+                            <i class="icon-cart-2"></i>
+                        </div>
+                        <div class="tile-status">
+                            <span class="name">Tienda</span>
+                        </div>
+                </div>
+                <div class="tile half bg-red" style="border-radius: 50%">
+                        <div class="tile-content icon">
+                            <i class="icon-rocket"></i>
+                        </div>
+                </div>
+                <div class="tile double">
+                <div class="tile-content image-set">
+                    <img src="imagenes/1.jpg">
+                    <img src="imagenes/2.jpg">
+                    <img src="imagenes/3.jpg">
+                    <img src="imagenes/4.jpg">
+                    <img src="imagenes/5.jpg">
+                </div>
+            </div>
+            </div>
+        </div>
+        <br>-->
+    <br>
+        <?php      
         $grupos = array(
                     array(24,13,15,4,9),
                     array(5,1,3,7,10),
@@ -53,21 +94,18 @@ function chequea ($nombre_fichero){
         
         for ($i=1; $i<6; $i++){
             echo '<div class="container" id="GRUPO'.$i.'">
-
                      <div class="row">
                              <div class="col-xs-2" >
-                                 ';
+                                ';
                                 for ($j=0; $j<5; $j++){
-                                     chequeaFichero('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
+                                     muestraColor('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
                                      echo '<br>';
                                 }
                         echo '</div>
                              <div class="col-xs-10">
                                 ';
                                 for ($j=0; $j<5; $j++){
-                                     if (chequea('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php')){
-                                         require 'GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php';   
-                                     }
+                                     muestraPagina('GRUPO'.$i.'/'.$array_alumnos[$grupos[$i-1][$j]].'.php');
                                      echo '<hr><br>';
                                 }
                         echo '</div>
@@ -75,7 +113,7 @@ function chequea ($nombre_fichero){
                   </div>
                   <hr>
                 ';
-        } //del for
+        } //del for $i
         ?>
     </body>
 </html>
