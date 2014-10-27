@@ -62,19 +62,6 @@
 
 <!--//////////////////////////////////// FIN //////////////////////////////////////-->
 
-<!--///////////////// LE METEMOS UN RATING /////////////////////////////////////////////-->
-<div class="rating" id="rating_2">
-    <ul>
-        <li class="rated"></li>
-        <li class="rated"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <span class="score-hint"></span>
-</div>
-<!--////////////////////FIN RATING/////////////////////////////////////////////////////-->
-
     </div>
     <div class="row">
             <div class="col-xs-12" >
@@ -125,6 +112,18 @@
 </div>
 <!--    /////////////// FIN //////////////////////////////////////////////////-->
 </div>
+<!--///////////////// LE METEMOS UN RATING /////////////////////////////////////////////-->
+<div class="rating" id="rating_2">
+    <ul>
+        <li class="rated"></li>
+        <li class="rated"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <span class="score-hint"></span>
+</div>
+<!--////////////////////FIN RATING/////////////////////////////////////////////////////-->
 
 <!--<div class="notice bg-blue fg-white" style="width: 25px;">BUNGA BUNGA ¡¡</div>-->
                
