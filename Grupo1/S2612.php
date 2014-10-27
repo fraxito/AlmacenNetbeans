@@ -17,13 +17,19 @@
 
                 </div>
                 
-                <div class="tile double">
-                    <div class="tile-content image-set">
-                        <div class="tile-content image" style="top: 0px; display: block;">
-                            <img src="Grupo1/S2612/images.jpg" width="100%">
+            <div class="tile double">
+                <div class="tile-content image-set" style="height: 100%">
+                    <div class="tile-content image" style="top: 0px; width: 100%;display: block;">
+                        <img src="Grupo1/S2612/images.jpg" height="100%">
+                        
+                        <div class="tile-content image" style="top: 0px; left: 125px; width: 100%;display: block;">
+                            <img src="Grupo1/S2612/images3.png" height="100%">
                         </div>
+
                     </div>
+
                 </div>
+
         </div>
     </div>
     <br>
