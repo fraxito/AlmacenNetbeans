@@ -16,11 +16,11 @@
                 </div>
                 <div class="tile quadro">
                 <div class="tile-content image-set">
-                    <img src="C3972imagenes/1.jpg">
-                    <img src="C3972imagenes/2.jpg">
-                    <img src="C3972imagenes/3.jpg">
-                    <img src="C3972imagenes/4.jpg">
-                    <img src="C3972imagenes/5.jpg">
+                    <img src="Grupo2/C3972imagenes/1.jpg">
+                    <img src="Grupo2/C3972imagenes/2.jpg">
+                    <img src="Grupo2/C3972imagenes/3.jpg">
+                    <img src="Grupo2/C3972imagenes/4.jpg">
+                    <img src="Grupo2/C3972imagenes/5.jpg">
                     
                 </div>
             </div>
