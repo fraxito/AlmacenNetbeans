@@ -1,9 +1,25 @@
 <?php 
 function muestraColor ($nombre_fichero){
     if (file_exists($nombre_fichero)) {
-        echo '<div class = "caja cajaVerde">'.$nombre_fichero.'</div>';
+        echo '
+            <div class="tile bg-green">
+                <div class="tile-content icon">
+                    <i class="icon-thumbs-up"></i>
+                </div>
+                <div class="tile-status">
+                    <span class="name">'.$nombre_fichero.'</span>
+                </div>
+            </div>';
     } else {
-        echo '<div class = "caja cajaRoja">'.$nombre_fichero.'</div>';
+        echo '
+            <div class="tile bg-red">
+                <div class="tile-content icon">
+                    <i class="icon-thumbs-down"></i>
+                </div>
+                <div class="tile-status">
+                    <span class="name">'.$nombre_fichero.'</span>
+                </div>
+            </div>';
     }
 }
 function muestraPagina ($nombre_fichero){
@@ -23,7 +39,6 @@ function muestraPagina ($nombre_fichero){
         <link href="css/bootstrap-theme.min.css" rel="stylesheet">
         <link href="css/metro-bootstrap.min.css" rel="stylesheet">
         <link href="css/iconFont.min.css" rel="stylesheet">
-        <link href="css/estilo.css" rel="stylesheet">
         
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/jquery.widget.min.js"></script>
@@ -33,10 +48,10 @@ function muestraPagina ($nombre_fichero){
      
     </head>
     <body class="metro">
-<!--        aqui os dejo un ejemplo de lo que se puede hacer con http://metroui.org.ua/
+<!--   aqui os dejo un ejemplo de lo que se puede hacer con http://metroui.org.ua/
         hay más ejemplos en http://metroui.org.ua/examples.html-->
         
-        <br> 
+<!--        <br> 
          <div class="row">
             <div class="col-xs-12" >
                 <div class="tile bg-darkPink">
@@ -44,10 +59,10 @@ function muestraPagina ($nombre_fichero){
                             <i class="icon-cart-2"></i>
                         </div>
                         <div class="tile-status">
-                            <span class="name">Store</span>
+                            <span class="name">Tienda</span>
                         </div>
                 </div>
-                <div class="tile half bg-red">
+                <div class="tile half bg-red" style="border-radius: 50%">
                         <div class="tile-content icon">
                             <i class="icon-rocket"></i>
                         </div>
@@ -63,7 +78,8 @@ function muestraPagina ($nombre_fichero){
             </div>
             </div>
         </div>
-        <br>
+        <br>-->
+    <br>
         <?php      
         $grupos = array(
                     array(24,13,15,4,9),
